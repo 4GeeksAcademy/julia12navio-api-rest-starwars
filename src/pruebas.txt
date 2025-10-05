@@ -1,0 +1,59 @@
+AÑADIR UN PLANTA FAVORITO
+    curl -X POST http://localhost:3000/favorite/planet/id
+AÑADIR UNA PERSONA FAVORITA 
+    curl -X POST http://localhost:3000/favorite/people/id
+
+ELIMINAR UN PLANETA FAVORITO
+    curl -X DELETE http://localhost:3000/favorite/planet/id
+ELIMINAR UAN PERSONA FAVORITA 
+    curl -X DELETE http://localhost:3000/favorite/people/id
+
+
+PEOPLE
+
+POST PEOPLE
+curl -i -X POST http://localhost:3000/people \
+  -H "Content-Type: application/json" \
+  -d '{
+        "name": "name",
+        "email": "email",
+        "gender": "gender"
+      }'
+
+
+PUT PEOPLE
+curl -i -X PUT http://localhost:3000/people/ID \
+  -H "Content-Type: application/json" \
+  -d '{
+        "name": "name remplazed",
+        "email": "email remplazed",
+        "gender": "gender remplazed"
+      }'
+
+DELETE PEOPLE
+curl -i -X DELETE http://localhost:3000/people/ID
+
+PLANETS
+
+POST PLANETS
+curl -i -X POST http://localhost:3000/planets \
+  -H "Content-Type: application/json" \
+  -d '{
+        "name": "Planet",
+        "climate": "climate",
+        "terrain": "terrain",
+        "population": 1000
+      }'
+
+PUT PLANETS
+curl -i -X PUT http://localhost:3000/planets/ID \
+  -H "Content-Type: application/json" \
+  -d '{
+        "name": "Planet remplazed",
+        "climate": "climate remplazed",
+        "terrain": "terrain remplazed",
+        "population": 0
+      }'
+
+DELETE PLANETS
+curl -i -X DELETE http://localhost:3000/planets/ID
